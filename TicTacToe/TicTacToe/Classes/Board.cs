@@ -19,11 +19,25 @@ namespace Lab04_TicTacToe.Classes
         /// <summary>
         /// DisplayBoard method: Output the board to console
         /// </summary>
+        /// 
 		public void DisplayBoard()
 		{
+			// Loop through first array of 3 obj
+			for (int i = 0; i < GameBoard.GetLength(0); i++)
+			{
+				string displayRow = "";
+
+				// Loop through each subarray
+				for (int j = 0; j < GameBoard.GetLength(1); j++)
+				{
+					displayRow += ($"  {GameBoard[i, j]}  |");
+				}
+				Console.WriteLine("-------------------");
+				Console.WriteLine($"|{displayRow}");
+			}
+			Console.WriteLine("-------------------");
 
 			//TODO: Output the board to the console
-
-		}
-	}
+        }
+    }
 }

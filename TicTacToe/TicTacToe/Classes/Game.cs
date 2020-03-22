@@ -31,13 +31,14 @@ namespace Lab04_TicTacToe.Classes
 		public Player Play()
 		{
 
-			//TODO: Complete this method and utilize the rest of the class structure to play the game.
+			//TODO: 
 
 			/*
              * Complete this method by constructing the logic for the actual playing of Tic Tac Toe. 
-             * 
              * A few things to get you started:
-            1. A turn consists of a player picking a position on the board with their designated marker. 
+            1. A TURN consists of a PLAYER picking a POSITION on the board with their designated marker.
+            F
+
             2. Display the board after every turn to show the most up to date state of the game
             3. Once a Winner is determined, display the board one final time and return a winner
             Few additional hints:

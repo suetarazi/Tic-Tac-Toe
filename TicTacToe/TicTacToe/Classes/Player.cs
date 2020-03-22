@@ -31,7 +31,7 @@ namespace Lab04_TicTacToe.Classes
 
 		}
 
-
+        
 		public static Position PositionForNumber(int position)
 		{
 			switch (position)
@@ -50,21 +50,24 @@ namespace Lab04_TicTacToe.Classes
 			}
 		}
 
-
+        // process of turn taking
 		public void TakeTurn(Board board)
 		{
 			IsTurn = true;
 
 			Console.WriteLine($"{Name} it is your turn");
 
+            // instantiating a new board everytime a position is picked by a player
 			Position position = GetPosition(board);
 
+            // When player put a mark:
 			if (Int32.TryParse(board.GameBoard[position.Row, position.Column], out int _))
 			{
+                // console will put a mark on board
 				board.GameBoard[position.Row, position.Column] = Marker;
 			}
 			else
-			{
+			{   // players cant put the same position twice
 				Console.WriteLine("This space is already occupied");
 			}
 		}
