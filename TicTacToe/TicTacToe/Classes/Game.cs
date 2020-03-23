@@ -30,6 +30,7 @@ namespace Lab04_TicTacToe.Classes
 		/// <returns>Winner</returns>
 		public Player Play()
 		{
+			
 
 			//TODO: 
 
@@ -82,7 +83,10 @@ namespace Lab04_TicTacToe.Classes
 				string c = Board.GameBoard[p3.Row, p3.Column];
 
 				// TODO:  Determine a winner has been reached. 
-				// return true if a winner has been reached. 
+				// return true if a winner has been reached.
+                // If statement
+
+            // CW For a winner
 
 			}
 
