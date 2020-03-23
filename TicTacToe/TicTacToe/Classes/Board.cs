@@ -17,9 +17,10 @@ namespace Lab04_TicTacToe.Classes
 		};
 
         /// <summary>
-        /// DisplayBoard method: Output the board to console
+        /// DisplayBoard method: Output the board to console.
+        /// only display once (an empty board) in the beginning of the game
         /// </summary>
-        /// 
+
 		public void DisplayBoard()
 		{
 			// Loop through first array of 3 obj

@@ -31,7 +31,7 @@ namespace Lab04_TicTacToe.Classes
 
 		}
 
-        
+        // Positioning X or O in the board(DisplayBoard)
 		public static Position PositionForNumber(int position)
 		{
 			switch (position)
@@ -58,6 +58,7 @@ namespace Lab04_TicTacToe.Classes
 			Console.WriteLine($"{Name} it is your turn");
 
             // instantiating a new board everytime a position is picked by a player
+            // calling the GetPosition Method and updated board.
 			Position position = GetPosition(board);
 
             // When player put a mark:
