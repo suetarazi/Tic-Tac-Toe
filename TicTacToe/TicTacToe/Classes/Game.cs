@@ -30,32 +30,62 @@ namespace Lab04_TicTacToe.Classes
 		/// <returns>Winner</returns>
 		public Player Play()
 		{
-			
+			int totalTurn = 9;
+			int currentTurn = 0;
+            
+			while (currentTurn < totalTurn && !CheckForWinner(Board))
+			{
 
-			//TODO: 
+				Player player = NextPlayer();
+				player.TakeTurn(Board);
+				currentTurn++;
 
-			/*
-             * Complete this method by constructing the logic for the actual playing of Tic Tac Toe. 
-             * A few things to get you started:
-            1. A TURN consists of a PLAYER picking a POSITION on the board with their designated marker.
-            F
+     
+			}
 
-            2. Display the board after every turn to show the most up to date state of the game
-            3. Once a Winner is determined, display the board one final time and return a winner
-            Few additional hints:
-                Be sure to keep track of the number of turns that have been taken to determine if a draw is required
-                and make sure that the game continues while there are unmarked spots on the board. 
-            Use any and all pre-existing methods in this program to help construct the method logic. 
-             */
-		}
+			if (currentTurn == 9 && !CheckForWinner(Board))
+			{
+
+				Console.WriteLine("Sorry, no winners please play again");
+				
+			}
+			else
+			{
+				Console.WriteLine($"{Player} won this game");
+				
+			}
 
 
-		/// <summary>
-		/// Check if winner exists
-		/// </summary>
-		/// <param name="board">current state of the board</param>
-		/// <returns>if winner exists</returns>
-		public bool CheckForWinner(Board board)
+
+				// figure out the player
+				// set the winner
+				// tie the player to winner in conditions
+
+
+				//TODO: 
+
+				/*
+				 * Complete this method by constructing the logic for the actual playing of Tic Tac Toe. 
+				 * A few things to get you started:
+				1. A TURN consists of a PLAYER picking a POSITION on the board with their designated marker.
+				2. Display the board after every turn to show the most up to date state of the game
+
+
+				3. Once a Winner is determined, display the board one final time and return a winner
+				Few additional hints:
+					Be sure to keep track of the number of turns that have been taken to determine if a draw is required
+					and make sure that the game continues while there are unmarked spots on the board. 
+				Use any and all pre-existing methods in this program to help construct the method logic. 
+				 */
+			}
+
+
+			/// <summary>
+			/// Check if winner exists
+			/// </summary>
+			/// <param name="board">current state of the board</param>
+			/// <returns>if winner exists</returns>
+			public bool CheckForWinner(Board board)
 		{
 			int[][] winners = new int[][]
 			{
@@ -81,6 +111,8 @@ namespace Lab04_TicTacToe.Classes
 				string a = Board.GameBoard[p1.Row, p1.Column];
 				string b = Board.GameBoard[p2.Row, p2.Column];
 				string c = Board.GameBoard[p3.Row, p3.Column];
+
+				
 
 				// TODO:  Determine a winner has been reached. 
 				// return true if a winner has been reached.
