@@ -32,15 +32,13 @@ namespace Lab04_TicTacToe.Classes
 		{
 			int totalTurn = 9;
 			int currentTurn = 0;
-            
+
+			Player player = NextPlayer();
+
 			while (currentTurn < totalTurn && !CheckForWinner(Board))
 			{
-
-				Player player = NextPlayer();
 				player.TakeTurn(Board);
 				currentTurn++;
-
-     
 			}
 
 			if (currentTurn == 9 && !CheckForWinner(Board))
@@ -49,17 +47,15 @@ namespace Lab04_TicTacToe.Classes
 				Console.WriteLine("Sorry, no winners please play again");
 				
 			}
-			else
+			else if(CheckForWinner(Board) == true)
 			{
-				Console.WriteLine($"{Player} won this game");
+				Console.WriteLine($"{player} won this game");
 				
 			}
 
 
-
-				// figure out the player
-				// set the winner
-				// tie the player to winner in conditions
+            // after checkwinner, if its false, then if current turn is less than 9, then keep playing.
+           
 
 
 				//TODO: 
@@ -86,41 +82,41 @@ namespace Lab04_TicTacToe.Classes
 			/// <param name="board">current state of the board</param>
 			/// <returns>if winner exists</returns>
 			public bool CheckForWinner(Board board)
-		{
-			int[][] winners = new int[][]
-			{
-				new[] {1,2,3},
-				new[] {4,5,6},
-				new[] {7,8,9},
+		    {
+			    int[][] winners = new int[][]
+			    {
+				    new[] {1,2,3},
+				    new[] {4,5,6},
+				    new[] {7,8,9},
 
-				new[] {1,4,7},
-				new[] {2,5,8},
-				new[] {3,6,9},
+				    new[] {1,4,7},
+				    new[] {2,5,8},
+				    new[] {3,6,9},
 
-				new[] {1,5,9},
-				new[] {3,5,7}
-			};
+				    new[] {1,5,9},
+				    new[] {3,5,7}
+			    };
 
-			// Given all the winning conditions, Determine the winning logic. 
-			for (int i = 0; i < winners.Length; i++)
-			{
-				Position p1 = Player.PositionForNumber(winners[i][0]);
-				Position p2 = Player.PositionForNumber(winners[i][1]);
-				Position p3 = Player.PositionForNumber(winners[i][2]);
+			    // Given all the winning conditions, Determine the winning logic. 
+			    for (int i = 0; i < winners.Length; i++)
+			    {
+				    Position p1 = Player.PositionForNumber(winners[i][0]); // 0,0
+				    Position p2 = Player.PositionForNumber(winners[i][1]); // 0,1
+				    Position p3 = Player.PositionForNumber(winners[i][2]); // 0,2
 
-				string a = Board.GameBoard[p1.Row, p1.Column];
-				string b = Board.GameBoard[p2.Row, p2.Column];
-				string c = Board.GameBoard[p3.Row, p3.Column];
-
-				
+				    string a = Board.GameBoard[p1.Row, p1.Column]; 
+				    string b = Board.GameBoard[p2.Row, p2.Column];
+				    string c = Board.GameBoard[p3.Row, p3.Column];
 
 				// TODO:  Determine a winner has been reached. 
 				// return true if a winner has been reached.
                 // If statement
 
-            // CW For a winner
-
-			}
+				    if ( a == b && a == c && b == c)
+                    {
+					return true;
+                    }
+			    }
 
 			return false;
 		}
