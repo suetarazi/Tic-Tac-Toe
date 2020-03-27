@@ -21,7 +21,7 @@ namespace UnitTesting_tictactoe
             Position p1 = new Position(0, 0);
             Position p2 = new Position(0, 1);
             Position p3 = new Position(0, 2);
-            newGame.Board.GameBoard[p1.Row, p1.Column] = "X";
+            newGame.Board.GameBoard[p1.Row, p1.Column] = "XX";
             newGame.Board.GameBoard[p2.Row, p2.Column] = "X";
             newGame.Board.GameBoard[p3.Row, p3.Column] = "X";
 
