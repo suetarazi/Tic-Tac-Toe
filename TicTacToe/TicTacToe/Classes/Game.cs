@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Lab04_TicTacToe.Classes
 {
-	class Game
+	public class Game
 	{
 		public Player PlayerOne { get; set; }
 		public Player PlayerTwo { get; set; }
@@ -34,49 +34,38 @@ namespace Lab04_TicTacToe.Classes
 		{
 			int totalTurn = 9;
 			int currentTurn = 0;
-
-			Player player = NextPlayer();
+			Player player = null;
 
 			while (currentTurn < totalTurn && !CheckForWinner(Board))
 			{
-				player.TakeTurn(Board);
+				Board.DisplayBoard();
+
+				player = NextPlayer();
+              
+                player.TakeTurn(Board);
+
+				if (CheckForWinner(Board))
+				{
+					break;
+				}
+                else
+                {
+				    SwitchPlayer();
+                }
+			
 				currentTurn++;
 			}
-
-			if (currentTurn == 9 && !CheckForWinner(Board))
-			{
-
-				Console.WriteLine("Sorry, no winners please play again");
-				
-			}
-			else if(CheckForWinner(Board) == true)
-			{
-				Console.WriteLine($"{player} won this game");
-				
-			}
-
-
-            // after checkwinner, if its false, then if current turn is less than 9, then keep playing.
-           
-
-
-				//TODO: 
-
-				/*
-				 * Complete this method by constructing the logic for the actual playing of Tic Tac Toe. 
-				 * A few things to get you started:
-				1. A TURN consists of a PLAYER picking a POSITION on the board with their designated marker.
-				2. Display the board after every turn to show the most up to date state of the game
-
-
-				3. Once a Winner is determined, display the board one final time and return a winner
-				Few additional hints:
-					Be sure to keep track of the number of turns that have been taken to determine if a draw is required
-					and make sure that the game continues while there are unmarked spots on the board. 
-				Use any and all pre-existing methods in this program to help construct the method logic. 
-				 */
-			}
-
+			Console.Clear();
+			Board.DisplayBoard();
+            if(currentTurn == totalTurn)
+            {
+				return null;
+            }
+            else
+            {
+				return player;
+            }
+        }
 
 			/// <summary>
 			/// Check if winner exists
@@ -114,12 +103,11 @@ namespace Lab04_TicTacToe.Classes
 				// return true if a winner has been reached.
                 // If statement
 
-				    if ( a == b && a == c && b == c)
-                    {
-					return true;
-                    }
-			    }
-
+			    if ( a == b && a == c)
+                {
+			    return true;
+                }
+		    }
 			return false;
 		}
 
