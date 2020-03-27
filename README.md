@@ -37,7 +37,7 @@ Then select and open ```Program.cs```
 ##### Using the Application
 ***![End of game sample](https://i.imgur.com/KjPo8nd.png)***
 ##### Unit Testing
-***![XUnit Output](https://files.slack.com/files-pri/T039KG69K-F010Y1ULNG7/unittesttictactoe.png)***
+***![XUnit Output](https://codefellows.slack.com/files/US353BYRJ/F010Y1ULNG7/unittesttictactoe.png)***
 
 ------------------------------
 
