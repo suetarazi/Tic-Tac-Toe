@@ -28,7 +28,7 @@ namespace Lab04_TicTacToe.Classes
 		/// Activate the Play of the game
 		/// </summary>
 		/// <returns>Winner</returns>
-		//really stuck on this method :( 
+		
 		public Player Play()
 	
 		{
