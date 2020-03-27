@@ -29,7 +29,7 @@ namespace UnitTesting_tictactoe
         }
 
         /// <summary>
-        /// 
+        /// Testing for winning condition by column
         /// </summary>
         [Fact]
         public void TestForWinningConditionColumn()
