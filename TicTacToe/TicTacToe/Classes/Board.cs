@@ -38,7 +38,7 @@ namespace Lab04_TicTacToe.Classes
 			}
 			Console.WriteLine("-------------------");
 
-			//TODO: Output the board to the console
+			
         }
     }
 }
