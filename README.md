@@ -14,7 +14,7 @@ This is a C# console application that will ask a user to input and play tic tac 
 ## Getting Started
 Clone this repository to your local machine.
 ```
-$ git clone [repo clone url here]
+$ git clone [https://github.com/teddydamian/TicTacToe-Classes-Object]
 ```
 #### To run the program from Visual Studio:
 Select ```File``` -> ```Open``` -> ```Project/Solution```
