@@ -7,7 +7,7 @@
 ------------------------------
 
 ## Description
-This is a C# console application that will ask a user to input and play tic
+This is a C# console application that will ask a user to input and play tic tac toe. This console version of the classic game involves two players, one assigned X's and the other is O's. The players input their names and then take turns selecting from one of 9 spaces on the board. The goal of the game is to get 3 X's or O's in a row. Behind the scenes, the game keeps track of the players turns, checks to see if a desired space is already taken on the game board, checks for a winner (and returns one if found), and stops if the game board is full (after 9 turns) and a winner has not yet been reached. 
 
 ------------------------------
 
